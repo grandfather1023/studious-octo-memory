@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ExtensionManifest Version="7.0" ExtensionBundleId="com.adobe.DesignLibraries.angular.2015.1" ExtensionBundleVersion="3.19.237"
+        ExtensionBundleName="DesignLibrary" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DevBundleVersion="3.19.0">
+    <ExtensionList>
+        <Extension Id="com.adobe.DesignLibraries.angular" Version="1.0" />
+        <Extension Id="com.adobe.DesignLibraries.touch" Version="1.0" />
+        <Extension Id="com.adobe.capture.extension" Version="1.0.0" />
+        <Extension Id="com.adobe.stock.panel.licensing-embedded" Version="1.0.0" />
+        <Extension Id="com.adobe.cclibraries.manager" Version="1.0.0" />
+    </ExtensionList>
+    <ExecutionEnvironment>
+        <HostList>
+            <Host Name="ILST" Version="[25.0,99.9]" />
+            <Host Name="PHXS" Version="[22.0,99.9]" />
+            <Host Name="PHSP" Version="[22.0,99.9]" />
+            <Host Name="PPRO" Version="[15.0,99.9]"/>
+            <Host Name="IDSN" Version="[16.0,99.9]"/>
+            <Host Name="AEFT" Version="[18.0,99.9]"/>
+            <Host Name="FLPR" Version="[21.0,99.9]"/>
+            <Host Name="DRWV" Version="[21.0,99.9]"/>
+            <Host Name="KBRG" Version="[11.0,99.9]"/>
+            <Host Name="STGR" Version="[1.0,99.9]"/>
+        </HostList>
+        <LocaleList>
+            <Locale Code="All" />
+        </LocaleList>
+        <RequiredRuntimeList>
+            <RequiredRuntime Name="CSXS" Version="5.0" />
+        </RequiredRuntimeList>
+    </ExecutionEnvironment>
+    <DispatchInfoList>
+        <Extension Id="com.adobe.DesignLibraries.angular">
+            <DispatchInfo>
+                <Resources>
+                    <MainPath>./index.html</MainPath>
+                    <CEFCommandLine>
+                        <Parameter>--high-dpi-support=1</Parameter>
+                        <Parameter>--enable-nodejs</Parameter>
+                        <Parameter>--mixed-context</Parameter>
+                        <Parameter>--disable-accelerated-video-decode</Parameter>
+                        <Parameter>--disable-threaded-scrolling</Parameter>
+                        <Parameter>--disable-pinch</Parameter>
+                    </CEFCommandLine>
+                    <ScriptPath>./jsx/core.jsx</ScriptPath>
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+                    <Type>Panel</Type>
+                    <Menu>%DL_LIBRARIES_PANEL_NAME</Menu>
+                    <Geometry>
+                        <Size>
+                            <Height>300</Height>
+                            <Width>245</Width>
+                        </Size>
+                        <MinSize>
+                            <Height>165</Height>
+                            <Width>245</Width>
+                        </MinSize>
+                        <MaxSize>
+                            <Height>7680</Height>
+                            <Width>7680</Width>
+                        </MaxSize>
+                    </Geometry>
+                    <Icons>
+                        <Icon Type="Normal">./images/IconLight.png</Icon>
+                        <Icon Type="RollOver">./images/IconLight.png</Icon>
+                        <Icon Type="DarkNormal">./images/IconDark.png</Icon>
+                        <Icon Type="DarkRollOver">./images/IconDark.png</Icon>
+                    </Icons>
+                </UI>
+            </DispatchInfo>
+            <DispatchInfo Host="DRWV">
+                <Resources>
+                    <MainPath>./index.html</MainPath>
+                    <CEFCommandLine>
+                        <Parameter>--high-dpi-support=1</Parameter>
+                        <Parameter>--enable-nodejs</Parameter>
+                        <Parameter>--mixed-context</Parameter>
+                        <Parameter>--disable-accelerated-video-decode</Parameter>
+                        <Parameter>--disable-threaded-scrolling</Parameter>
+                        <Parameter>--disable-pinch</Parameter>
+                    </CEFCommandLine>
+                    <ScriptPath>./jsx/core.jsx</ScriptPath>
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+                    <Type>Panel</Type>
+                    <Menu>%DL_LIBRARIES_PANEL_NAME_CC</Menu>
+                    <Geometry>
+                        <Size>
+                            <Height>300</Height>
+                            <Width>245</Width>
+                        </Size>
+                        <MinSize>
+                            <Height>165</Height>
+                            <Width>245</Width>
+                        </MinSize>
+                        <MaxSize>
+                            <Height>7680</Height>
+                            <Width>7680</Width>
+                        </MaxSize>
+                    </Geometry>
+                    <Icons>
+                        <Icon Type="Normal">./images/IconLight.png</Icon>
+                        <Icon Type="RollOver">./images/IconLight.png</Icon>
+                        <Icon Type="DarkNormal">./images/IconDark.png</Icon>
+                        <Icon Type="DarkRollOver">./images/IconDark.png</Icon>
+                    </Icons>
+                </UI>
+            </DispatchInfo>
+
+
+            <!-- Override the script path to load FLPR's init script -->
+            <!-- Required to supply some alternatives for the ExtendScript APIs -->
+            <DispatchInfo Host="FLPR">
+                <Resources>
+                    <MainPath>./index.html</MainPath>
+                    <CEFCommandLine>
+                        <Parameter>--high-dpi-support=1</Parameter>
+                        <Parameter>--enable-nodejs</Parameter>
+                        <Parameter>--mixed-context</Parameter>
+                        <Parameter>--disable-accelerated-video-decode</Parameter>
+                        <Parameter>--disable-threaded-scrolling</Parameter>
+                        <Parameter>--disable-pinch</Parameter>
+                    </CEFCommandLine>
+                    <ScriptPath>./applications/FLPR/jsx/core.jsx</ScriptPath>
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+                    <Type>Panel</Type>
+                    <Menu>%DL_LIBRARIES_PANEL_NAME_CC</Menu>
+                    <Geometry>
+                        <Size>
+                            <Height>300</Height>
+                            <Width>245</Width>
+                        </Size>
+                        <MinSize>
+                            <Height>165</Height>
+                            <Width>245</Width>
+                        </MinSize>
+                        <MaxSize>
+                            <Height>7680</Height>
+                            <Width>7680</Width>
+                        </MaxSize>
+                    </Geometry>
+                    <Icons>
+                        <Icon Type="Normal">./images/IconLight.png</Icon>
+                        <Icon Type="RollOver">./images/IconLight.png</Icon>
+                        <Icon Type="DarkNormal">./images/IconDark.png</Icon>
+                        <Icon Type="DarkRollOver">./images/IconDark.png</Icon>
+                    </Icons>
+                </UI>
+            </DispatchInfo>
+            <DispatchInfo Host="KBRG">
+                <Resources>
+                    <MainPath>./index.html</MainPath>
+                    <CEFCommandLine>
+                        <Parameter>--high-dpi-support=1</Parameter>
+                        <Parameter>--enable-nodejs</Parameter>
+                        <Parameter>--mixed-context</Parameter>
+                        <Parameter>--disable-accelerated-video-decode</Parameter>
+                        <Parameter>--disable-threaded-scrolling</Parameter>
+                        <Parameter>--disable-pinch</Parameter>
+                    </CEFCommandLine>
+                    <ScriptPath>./jsx/core.jsx</ScriptPath>
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+                    <Type>Embedded</Type>
+                    <Menu>%DL_LIBRARIES_PANEL_NAME</Menu>
+                    <Geometry>
+                        <Size>
+                            <Height>300</Height>
+                            <Width>245</Width>
+                        </Size>
+                        <MinSize>
+                            <Height>165</Height>
+                            <Width>245</Width>
+                        </MinSize>
+                        <MaxSize>
+                            <Height>7680</Height>
+                            <Width>7680</Width>
+                        </MaxSize>
+                    </Geometry>
+                    <Icons>
+                        <Icon Type="Normal">./images/IconLight.png</Icon>
+                        <Icon Type="RollOver">./images/IconLight.png</Icon>
+                        <Icon Type="DarkNormal">./images/IconDark.png</Icon>
+                        <Icon Type="DarkRollOver">./images/IconDark.png</Icon>
+                    </Icons>
+                </UI>
+            </DispatchInfo>
+            <DispatchInfo Host="IDSN">
+                <Resources>
+                    <MainPath>./index.html</MainPath>
+                    <CEFCommandLine>
+                        <Parameter>--high-dpi-support=1</Parameter>
+                        <Parameter>--enable-nodejs</Parameter>
+                        <Parameter>--mixed-context</Parameter>
+                        <Parameter>--disable-accelerated-video-decode</Parameter>
+                        <Parameter>--disable-threaded-scrolling</Parameter>
+                        <Parameter>--disable-pinch</Parameter>
+                    </CEFCommandLine>
+                    <ScriptPath>./jsx/core.jsx</ScriptPath>
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+                    <Type>Panel</Type>
+                    <Menu>%DL_LIBRARIES_PANEL_NAME_CC</Menu>
+                    <Geometry>
+                        <Size>
+                            <Height>300</Height>
+                            <Width>245</Width>
+                        </Size>
+                        <MinSize>
+                            <Height>165</Height>
+                            <Width>245</Width>
+                        </MinSize>
+                        <MaxSize>
+                            <Height>7680</Height>
+                            <Width>7680</Width>
+                        </MaxSize>
+                    </Geometry>
+                    <Icons>
+                        <Icon Type="Normal">./images/IconLight.png</Icon>
+                        <Icon Type="RollOver">./images/IconLight.png</Icon>
+                        <Icon Type="DarkNormal">./images/IconDark.png</Icon>
+                        <Icon Type="DarkRollOver">./images/IconDark.png</Icon>
+                    </Icons>
+                </UI>
+            </DispatchInfo>
+        </Extension>
+        <Extension Id="com.adobe.DesignLibraries.touch">
+            <DispatchInfo Host="ILST">
+                <Resources>
+                    <MainPath>./index.html</MainPath>
+                    <CEFCommandLine>
+                        <Parameter>--high-dpi-support=1</Parameter>
+                        <Parameter>--enable-nodejs</Parameter>
+                        <Parameter>--mixed-context</Parameter>
+                        <Parameter>--disable-accelerated-video-decode</Parameter>
+                        <Parameter>--disable-threaded-scrolling</Parameter>
+                        <Parameter>--disable-pinch</Parameter>
+                    </CEFCommandLine>
+                    <ScriptPath>./jsx/core.jsx</ScriptPath>
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+                    <Type>Embedded</Type>
+                    <Menu>%DL_LIBRARIES_PANEL_NAME</Menu>
+                    <Geometry>
+                        <Size>
+                            <Height>300</Height>
+                            <Width>245</Width>
+                        </Size>
+                        <MinSize>
+                            <Height>165</Height>
+                            <Width>245</Width>
+                        </MinSize>
+                    </Geometry>
+                    <Icons>
+                        <Icon Type="Normal">./images/IconLight.png</Icon>
+                        <Icon Type="RollOver">./images/IconLight.png</Icon>
+                        <Icon Type="DarkNormal">./images/IconDark.png</Icon>
+                        <Icon Type="DarkRollOver">./images/IconDark.png</Icon>
+                    </Icons>
+                </UI>
+            </DispatchInfo>
+            <DispatchInfo Host="IDSN">
+                <Resources>
+                    <MainPath>./index.html</MainPath>
+                    <CEFCommandLine>
+                        <Parameter>--high-dpi-support=1</Parameter>
+                        <Parameter>--enable-nodejs</Parameter>
+                        <Parameter>--mixed-context</Parameter>
+                        <Parameter>--disable-accelerated-video-decode</Parameter>
+                        <Parameter>--disable-threaded-scrolling</Parameter>
+                        <Parameter>--disable-pinch</Parameter>
+                    </CEFCommandLine>
+                    <ScriptPath>./jsx/core.jsx</ScriptPath>
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+                    <Type>Embedded</Type>
+                    <Menu>%DL_LIBRARIES_PANEL_NAME_CC</Menu>
+                    <Geometry>
+                        <Size>
+                            <Height>300</Height>
+                            <Width>245</Width>
+                        </Size>
+                        <MinSize>
+                            <Height>165</Height>
+                            <Width>245</Width>
+                        </MinSize>
+                    </Geometry>
+                    <Icons>
+                        <Icon Type="Normal">./images/IconLight.png</Icon>
+                        <Icon Type="RollOver">./images/IconLight.png</Icon>
+                        <Icon Type="DarkNormal">./images/IconDark.png</Icon>
+                        <Icon Type="DarkRollOver">./images/IconDark.png</Icon>
+                    </Icons>
+                </UI>
+            </DispatchInfo>
+        </Extension>
+        <Extension Id="com.adobe.capture.extension">
+            <DispatchInfo Host="PHXS">
+                <Resources>
+                    <MainPath>./extensions/capture/capture.html</MainPath>
+                    <ScriptPath>./extensions/capture/applications/PHXS/capture.jsx</ScriptPath>
+                    <CEFCommandLine>
+                        <Parameter>--high-dpi-support=1</Parameter>
+                        <Parameter>--enable-nodejs</Parameter>
+                        <Parameter>--mixed-context</Parameter>
+                        <Parameter>--disable-accelerated-video-decode</Parameter>
+                        <Parameter>--disable-threaded-scrolling</Parameter>
+                        <Parameter>--disable-pinch</Parameter>
+                    </CEFCommandLine>
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+                    <Type>ModalDialog</Type>
+                    <Geometry>
+                        <Size>
+                            <Height>620</Height>
+                            <Width>860</Width>
+                        </Size>
+                        <MinSize>
+                            <Height>620</Height>
+                            <Width>860</Width>
+                        </MinSize>
+                        <MaxSize>
+                            <Height>1600</Height>
+                            <Width>1600</Width>
+                        </MaxSize>
+                    </Geometry>
+                    <Icons />
+                </UI>
+            </DispatchInfo>
+            <DispatchInfo Host="ILST">
+                <Resources>
+                    <MainPath>./extensions/capture/capture.html</MainPath>
+                    <ScriptPath>./extensions/capture/applications/ILST/capture.jsx</ScriptPath>
+                    <CEFCommandLine>
+                        <Parameter>--high-dpi-support=1</Parameter>
+                        <Parameter>--enable-nodejs</Parameter>
+                        <Parameter>--mixed-context</Parameter>
+                        <Parameter>--disable-accelerated-video-decode</Parameter>
+                        <Parameter>--disable-threaded-scrolling</Parameter>
+                        <Parameter>--disable-pinch</Parameter>
+                    </CEFCommandLine>
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+                    <Type>ModalDialog</Type>
+                    <Geometry>
+                        <Size>
+                            <Height>620</Height>
+                            <Width>860</Width>
+                        </Size>
+                        <MinSize>
+                            <Height>620</Height>
+                            <Width>860</Width>
+                        </MinSize>
+                        <MaxSize>
+                            <Height>1600</Height>
+                            <Width>1600</Width>
+                        </MaxSize>
+                    </Geometry>
+                    <Icons />
+                </UI>
+            </DispatchInfo>
+            <DispatchInfo Host="IDSN">
+                <Resources>
+                    <MainPath>./extensions/capture/capture.html</MainPath>
+                    <ScriptPath>./extensions/capture/applications/IDSN/capture.jsx</ScriptPath>
+                    <CEFCommandLine>
+                        <Parameter>--high-dpi-support=1</Parameter>
+                        <Parameter>--enable-nodejs</Parameter>
+                        <Parameter>--mixed-context</Parameter>
+                        <Parameter>--disable-accelerated-video-decode</Parameter>
+                        <Parameter>--disable-threaded-scrolling</Parameter>
+                        <Parameter>--disable-pinch</Parameter>
+                    </CEFCommandLine>
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+                    <Type>ModalDialog</Type>
+                    <Geometry>
+                        <Size>
+                            <Height>620</Height>
+                            <Width>860</Width>
+                        </Size>
+                        <MinSize>
+                            <Height>620</Height>
+                            <Width>860</Width>
+                        </MinSize>
+                        <MaxSize>
+                            <Height>1600</Height>
+                            <Width>1600</Width>
+                        </MaxSize>
+                    </Geometry>
+                    <Icons />
+                </UI>
+            </DispatchInfo>
+        </Extension>
+        <Extension Id="com.adobe.stock.panel.licensing-embedded">
+            <DispatchInfo>
+                <Resources>
+                <MainPath>./extensions/stock-panel-licensing/index.html</MainPath>
+                <CEFCommandLine>
+                    <Parameter>--enable-nodejs</Parameter>
+                </CEFCommandLine>
+                </Resources>
+                <Lifecycle>
+                <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+                <Type>ModalDialog</Type>
+                <Menu></Menu>
+                <Geometry>
+                    <Size>
+                        <Width>480</Width>
+                        <Height>323</Height>
+                    </Size>
+                    <MinSize>
+                        <Width>480</Width>
+                        <Height>323</Height>
+                    </MinSize>
+                    <MaxSize>
+                        <Width>480</Width>
+                        <Height>560</Height>
+                    </MaxSize>
+                </Geometry>
+                </UI>
+            </DispatchInfo>
+        </Extension>
+        <Extension Id="com.adobe.cclibraries.manager">
+            <DispatchInfo>
+                <Resources>
+                    <MainPath>./manager.html</MainPath>
+                     <CEFCommandLine>
+                        <Parameter>--enable-nodejs</Parameter>
+                    </CEFCommandLine>
+                </Resources>
+                <Lifecycle>
+                <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+                <Type>Modeless</Type>
+                <Geometry>
+                    <Size>
+                        <Width>850</Width>
+                        <Height>700</Height>
+                    </Size>
+                </Geometry>
+                </UI>
+            </DispatchInfo>
+        </Extension>
+    </DispatchInfoList>
+</ExtensionManifest>
